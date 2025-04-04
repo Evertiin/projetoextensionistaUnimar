@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .button-container {
+            margin: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        .task-list {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #007bff;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .task h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #343a40;
+        }
+
+        .task p {
+            margin: 5px 0;
+            color: #6c757d;
+        }
+
+        .task .priority {
+            font-weight: bold;
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <div class="button-container">
+        <a href="form.html" class="button">Nova Tarefa</a>
+        <a href="visualizar.php" class="button" style="background-color: #007bff;">Visualizar Tarefas</a>
+    </div>
+
+    
+</body>
+</html>

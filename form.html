@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #007BFF, #003f7f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: #fff;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Animação sutil na entrada do formulário */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+            align-self: flex-start;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s ease-in-out;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            background: linear-gradient(90deg, #007BFF, #0056b3);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #0056b3, #003f7f);
+            transform: scale(1.05);
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 420px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Cadastro de Tarefas</h2>
+    <div class="container">
+        <form action="inserir.php" method="post">
+            <label for="titulo">Título da Tarefa:</label>
+            <input type="text" id="titulo" name="titulo" required placeholder="Digite o título da tarefa">
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="4" required placeholder="Descreva a tarefa..."></textarea>
+
+            <label for="prioridade">Prioridade:</label>
+            <select id="prioridade" name="prioridade" required>
+                <option value="padrao">Padrão</option>
+                <option value="media">Média</option>
+                <option value="alta">Alta</option>
+                <option value="urgente">Urgente</option>
+            </select>
+
+            <label for="vencimento">Data de Vencimento:</label>
+            <input type="date" id="vencimento" name="vencimento" required>
+
+            <button type="submit" class="btn">Cadastrar Tarefa</button>
+        </form>
+    </div>
+</body>
+</html>
